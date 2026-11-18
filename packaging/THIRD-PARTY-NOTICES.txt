@@ -1,0 +1,20 @@
+Kidsroom contains third-party software with separate copyright and license terms.
+The accompanying licenses directory includes the installed notices and exact versions.
+PyInstaller's license includes its exception for distributing generated executables.
+
+Qt, PySide6 and Shiboken are used under their LGPLv3 licensing option.
+The licenses directory contains LGPLv3 and its referenced GPLv3 license text.
+Qt libraries are dynamically linked in _internal and may be replaced with
+compatible modified versions. Reverse engineering to debug modifications to
+LGPL-covered libraries is permitted as provided by the LGPL.
+
+Official corresponding-source release locations:
+  https://download.qt.io/official_releases/QtForPython/
+  https://download.qt.io/archive/qt/
+  https://code.qt.io/pyside/pyside-setup.git
+  https://code.qt.io/qt/qtbase.git
+Use the exact versions recorded in licenses/VERSIONS.json.
+
+The Python application source and reproducible packaging configuration are
+provided in the Kidsroom project alongside this distribution.
+No third-party trademarks or copyrights are transferred to Kidsroom.

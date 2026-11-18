@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=75"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "kidsroom"
+version = "0.1.0"
+description = "Local learning and screen-time companion for Windows families"
+requires-python = ">=3.11"
+dependencies = [
+    "PySide6-Essentials>=6.8,<7",
+    "opencv-python-headless>=4.10,<5",
+    "numpy>=2,<3",
+    "mss>=10,<11",
+    "pywin32>=308; sys_platform == 'win32'",
+]
+
+[project.gui-scripts]
+kidsroom = "kidsroom.app:main"
+
+[project.optional-dependencies]
+build = ["pyinstaller>=6.16,<7"]
+
+[tool.setuptools.packages.find]
+include = ["kidsroom*"]

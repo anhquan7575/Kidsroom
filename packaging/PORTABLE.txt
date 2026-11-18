@@ -1,0 +1,26 @@
+KIDSROOM - WINDOWS 10/11 64-BIT
+
+CHAY NGAY (khong can cai Python):
+1. Giai nen toan bo ZIP ra mot thu muc.
+2. Nhan dup Kidsroom.exe.
+3. Cha me dat mat khau va them de bai.
+4. Muon thoat: Cha me - Quan ly -> Thoat giao dien.
+
+KHONG tach file EXE khoi thu muc _internal.
+Ban chay truc tiep chua co service tu khoi dong khi Windows dang nhap.
+
+CAI SERVICE (tuy chon, can Administrator):
+Mo PowerShell Run as Administrator tai thu muc nay, chay:
+.\Install-Service.ps1 -ChildAccount "$env:COMPUTERNAME\hocsinh"
+Thay hocsinh bang ten tai khoan Windows cua tre.
+Script sao chep vao Program Files va cai service, nhung CHUA khoi dong service.
+Thiet lap trong tai khoan tre truoc khi reboot, sau do: Start-Service Kidsroom
+
+DUNG / GO SERVICE:
+Stop-Service Kidsroom
+Vao quan ly trong GUI, thoat giao dien, sau do:
+& "C:\Program Files\Kidsroom\KidsroomService.exe" remove
+
+Doc README.md de xem gioi han bao ve, sao luu va huong dan chi tiet.
+Topmost khong phai kiosk; nen dung tai khoan Standard User rieng cho tre.
+Ban EXE chua ky so. Khong tat antivirus/SmartScreen de chay.
